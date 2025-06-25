@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "fojmainprogram",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.fojprogram.dev",
   "build": {
     "frontendDist": "../out",
     "devUrl": "http://localhost:3000",
@@ -13,8 +13,7 @@
     "windows": [
       {
         "title": "fojmainprogram",
-        "width": 800,
-        "height": 600,
+        "maximized": true,
         "resizable": true,
         "fullscreen": false
       }
