@@ -1,6 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { Student } from "@/components/models"; // Adjust the path to your model
-import { Settings } from "lucide-react";
 
 export const columns: ColumnDef<Student>[] = [
     {

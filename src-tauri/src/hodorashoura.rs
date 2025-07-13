@@ -42,6 +42,7 @@ pub async fn get_hodor_ashoura_by_day_id(
         JOIN ihyaa_days d ON ha.ihyaa_day_id = d.id
         JOIN ihyaa i ON d.ihyaa_id = i.id
         WHERE ha.ihyaa_day_id = $1
+        ORDER BY ha.date DESC
         "#,
         day_id
     )
@@ -90,7 +91,7 @@ pub async fn add_hodor_ashoura(
     ihyaa_day_id: i64,
     date: String,
 ) -> Result<(), String> {
-    sqlx::query("INSERT INTO hodor_ashoura (student_id, ihyaa_day_id, date) VALUE ($1, $2, $3)")
+    sqlx::query("INSERT INTO hodor_ashoura (student_id, ihyaa_day_id, date) VALUES ($1, $2, $3)")
         .bind(student_id)
         .bind(ihyaa_day_id)
         .bind(date)

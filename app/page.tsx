@@ -109,10 +109,10 @@ const Page = () => {
           <TabsTrigger value="valid" className="cursor-pointer">أسماء الأفراد الكشفيين</TabsTrigger>
           <TabsTrigger value="invalid" className="cursor-pointer">أسماء الأفراد غير الكشفيين</TabsTrigger>
         </TabsList>
-        <TabsContent value="valid">
+        <TabsContent value="valid" dir="rtl">
           <div className="flex flex-col gap-4 mt-2">
             <div className="flex justify-between items-center">
-              <div className="flex">
+              <div className="flex gap-2">
                 <Button variant="secondary" className="bg-green-700 hover:bg-green-800 text-white border-2 border-black rounded-sm" onClick={handleButtonClick}>
                   <Import />
                   ادخال كشف الأسماء
@@ -150,7 +150,7 @@ const Page = () => {
             <DataTable columns={columns} data={validStudents} />
           </div>
         </TabsContent>
-        <TabsContent value="invalid">
+        <TabsContent value="invalid" dir="rtl">
           <div className="flex flex-col gap-4 mt-2">
             <div className="flex justify-between items-center">
               <div className="flex">

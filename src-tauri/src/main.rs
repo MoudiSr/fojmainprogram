@@ -12,7 +12,7 @@ mod hodorashoura;
 use crate::ihyaa::{delete_ihyaa, get_ihyaat, insert_ihyaa, get_ihyaa_by_id};
 use crate::students::{get_students, insert_student, import_students, delete_all_students_and_restore_sequence, edit_student, delete_student};
 use crate::ihyaadays::{get_ihyaa_days, finish_ihyaa_day, get_ihyaa_day_by_id};
-use crate::hodorashoura::{get_hodor_ashoura_by_day_id, add_hodor_ashoura};
+use crate::hodorashoura::{get_hodor_ashoura_by_day_id, add_hodor_ashoura, delete_hodor_ashoura};
 
 #[tokio::main]
 async fn main() {
@@ -41,7 +41,8 @@ async fn main() {
             finish_ihyaa_day,
             get_hodor_ashoura_by_day_id,
             add_hodor_ashoura,
-            get_ihyaa_day_by_id
+            get_ihyaa_day_by_id,
+            delete_hodor_ashoura
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

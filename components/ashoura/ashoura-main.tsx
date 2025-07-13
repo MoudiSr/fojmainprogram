@@ -9,7 +9,6 @@ import { Ihyaa } from "../models"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog"
 import { Input } from "../ui/input"
 import { Separator } from "../ui/separator"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 
@@ -53,8 +52,6 @@ export default function AshouraMain() {
             console.error("Error deleting ihyaa:", error);
         }
     }
-
-    const router = useRouter();
 
     return (
         <>
